@@ -11,6 +11,8 @@
     citing_tpot2
     support
     related
+    test
+    0_Genetic_Algorithm_Overview.ipynb
 
 Indices and tables
 ==================
