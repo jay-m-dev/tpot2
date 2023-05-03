@@ -20,11 +20,11 @@ jobs:
           pip install setuptools wheel twine
       - name: Build package
         run: python setup.py sdist bdist_wheel
-      - name: Upload to PyPI
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-        run: twine upload --repository testpypi dist/*
+      # - name: Upload to PyPI
+      #   env:
+      #     TWINE_USERNAME: __token__
+      #     TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      #   run: twine upload dist/*
   
   build-and-publish-conda:
     needs: build-and-publish-pypi
